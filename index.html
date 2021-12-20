@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Grupo 15</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+<script>
+    function suma(){
+
+        var puntos = Number(document.getElementById("puntos").innerHTML);
+        console.log("los puntos son "+puntos);
+
+        var suma = puntos + 1;
+        document.getElementById("puntos").innerHTML = suma;
+    }
+
+    function calcular(){
+        var puntos = Number(document.getElementById("puntos").innerHTML);
+
+        if (puntos >= 10){
+            alert("Suficiente!!!");
+        } else {
+            alert("Falta....");
+        }
+    }
+</script>
+    </head>
+
+    <body>
+        <div id="menu">
+            <div id="titulo"><h3>YO</h3></div>
+            <div id="navegacion" style="float: left; width: 30%;">
+                <UL style="list-style: none";>
+                    <li style="float:left; width:100px"> <a href="index.html" class="texto_verde">QUIEN</a></li>
+                    <li style="float:left; width:100px"> <a href="que.html" class="texto_verde">QUE</a></li>
+                    <li style="float:left; width:100px"> <a href="donde.html" class="texto_verde">DONDE</a></li>
+                </UL>
+            </div>
+        </div>
+
+        <div id="cuerpo">
+            <h3>QUIEN SOY?</h3>
+            <p style="text-align: center;"><img src="img/luna.png" style="border-radius: 300px; margin: 20px 0 20px 0;"></p>
+            <h3>UN AVENTURERO</h3>
+        </div>
+
+        <div id="descripcion">
+            <form>
+                <input type="button" value="CLICK PARA SUMAR PUNTOS" onclick="suma()">
+                <p>TUS PUNTOS SON: <span id="puntos">0</span></p>
+
+                <input type="button" value="CALCULAR" onclick="calcular()">
+            </form>
+        </div>
+
+    </body>
+</html>
